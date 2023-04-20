@@ -4,6 +4,8 @@ echo Hello!
 ping -c 5 10.8.0.1
 ping -c 5 192.168.1.4
 ping -c 5 linux-server.home.gershnik.info
+ping -c 5 linux-server
+
 
 
 
