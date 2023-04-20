@@ -29,5 +29,6 @@ jobs:
           sudo ip link set up dev wg0
           sudo ip route add 192.168.1.0/24 dev wg0
           sudo resolvectl dns wg0 192.168.1.1
+          sudo resolvectl domain wg0 home.gershnik.info
           ./script
 
