@@ -1,0 +1,32 @@
+name: Test
+
+on: workflow_dispatch
+
+jobs:
+  runs-on: ubuntu-latest
+  
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Connect
+    - run: |
+        sudo apt install wireguard
+        cat > wg.conf << EOF
+        [Interface]
+        PrivateKey = ${{ secrets.WG_PRIVATE_KEY }}
+        Address = 10.8.0.3/24
+        DNS = 192.168.1.1
+
+        [Peer]
+        PublicKey = ${{ secrets.WG_SERVER_PUBLIC_KEY }}
+        PresharedKey = ${{ secrets.WG_SERVER_PRESHARED_KEY }}
+        AllowedIPs = 0.0.0.0/0
+        Endpoint = server.gershnik.info:52320
+        EOF
+        sudo ip link add dev wg0 type wireguard
+        sudo ip address add dev wg0 10.8.0.3/24
+        wg setconf wg0 wg.conf
+        sudo ip link set up dev wg0
+        ./script
+
