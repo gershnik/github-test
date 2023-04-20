@@ -27,6 +27,6 @@ jobs:
           sudo ip address add dev wg0 10.8.0.3/24
           sudo wg setconf wg0 wg.conf
           sudo ip link set up dev wg0
-          #sudo resolvectl dns wg0 192.168.1.1
+          sudo resolvectl dns wg0 192.168.1.1
           ./script
 
