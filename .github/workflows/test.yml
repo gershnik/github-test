@@ -16,7 +16,6 @@ jobs:
           cat > wg.conf << EOF
           [Interface]
           PrivateKey = ${{ secrets.WG_PRIVATE_KEY }}
-          Address = 10.8.0.3/24
           DNS = 192.168.1.1
 
           [Peer]
