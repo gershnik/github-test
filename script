@@ -1,15 +1,8 @@
 #! /bin/bash
 
-echo Hello!
-# ping -c 5 10.8.0.1
-# ping -c 5 192.168.1.4
-# ping -c 5 linux-server.home.gershnik.info
-# ping -c 5 linux-server
-
-SSH_FLAGS="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i id_ghaction"
-
-ssh $SSH_FLAGS ghaction@linux-server.home.gershnik.info wakeonlan noisy
-#ssh $SSH_FLAGS noisy.home.gershnik.info dir
+pwd
+ls
+uname
 
 
 
