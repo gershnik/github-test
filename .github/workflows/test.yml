@@ -12,7 +12,7 @@ jobs:
 
       - name: Run
         run: |
-          /Users/eugene/Work/run-agent/run-agent <<'EOF'
+          /Users/eugene/Work/run-agent/run-agent gh-debian-11 10 <<'EOF'
           ls
           pwd
           uname
