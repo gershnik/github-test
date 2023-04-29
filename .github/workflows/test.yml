@@ -12,10 +12,12 @@ jobs:
 
       - name: Run
         run: |
-          /Users/eugene/Work/run-agent/run-agent gh-debian-11 10 <<'EOF'
-          ls
-          pwd
-          uname
-          EOF
+          #/Users/eugene/Work/run-agent/run-agent gh-debian-11 10 <<'EOF'
+          #ls
+          #pwd
+          #uname
+          #EOF
+          echo $RUN_AGENT_PATH
+          echo $RUN_AGENT_REMOTE
 
 
