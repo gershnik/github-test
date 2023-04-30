@@ -12,7 +12,7 @@ jobs:
 
       - name: Run
         run: |
-          "$RUN_AGENT_PATH" "$RUN_AGENT_REMOTE" 15 <<'EOF'
+          "$RUN_AGENT_PATH" gh-debian-11 15 <<'EOF'
           ls
           pwd
           uname
