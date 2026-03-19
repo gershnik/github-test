@@ -12,7 +12,7 @@ jobs:
 
       - name: Run
         run: |
-          "$RUN_AGENT_PATH" gh-debian-11-arm <<'EOF'
+          "$RUNNER_TOOLS_PATH"/run-agent gh-debian-11-arm <<'EOF'
           ls
           pwd
           uname
