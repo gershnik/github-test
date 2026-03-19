@@ -12,7 +12,7 @@ jobs:
 
       - name: Run
         run: |
-          "$RUNNER_TOOLS_PATH"/run-agent gh-debian-11-armhf <<'EOF'
+          "$RUNNER_TOOLS_PATH"/run-agent gh-netbsd-10 <<'EOF'
           ls
           pwd
           uname
