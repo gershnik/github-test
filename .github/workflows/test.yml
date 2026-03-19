@@ -8,11 +8,11 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Run
         run: |
-          "$RUN_AGENT_PATH" gh-debian-11 15 <<'EOF'
+          "$RUN_AGENT_PATH" gh-debian-11-arm <<'EOF'
           ls
           pwd
           uname
