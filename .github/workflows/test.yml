@@ -26,7 +26,8 @@ jobs:
     - name: Run
       shell: bash
       run: |
-        "/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -property installationPath
-        
+        VCROOT=`"/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -property installationPath`
+        echo $VCROOT
+        ls "$VCROOT\\bin"
 
 
