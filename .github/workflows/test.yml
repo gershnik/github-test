@@ -28,6 +28,6 @@ jobs:
       run: |
         VCROOT=`"/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -property installationPath`
         echo $VCROOT
-        ls "$VCROOT\\bin"
+        ls "$VCROOT\\VC\\Tools\\Llvm\\x64\\bin"
 
 
