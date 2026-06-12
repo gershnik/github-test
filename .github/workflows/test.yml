@@ -3,20 +3,30 @@ name: Test
 on: push
 
 jobs:
-  main:
-    runs-on: self-hosted
+  # main:
+  #   runs-on: self-hosted
     
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v6
 
-      - name: Run
-        run: |
-          "$RUNNER_TOOLS_PATH"/run-agent gh-netbsd-10 <<'EOF'
-          ls
-          pwd
-          uname
-          EOF
+  #     - name: Run
+  #       run: |
+  #         "$RUNNER_TOOLS_PATH"/run-agent gh-netbsd-10 <<'EOF'
+  #         ls
+  #         pwd
+  #         uname
+  #         EOF
+
+  main:
+    runs-on: windows-latest
+
+    steps:
+
+    - name: Run
+      shell: bash
+      run: |
+        "/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -property installationPath
         
 
 
